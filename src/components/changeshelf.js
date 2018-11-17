@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
 
-export default class changeShelf extends Component {
+
+
+export default class ChangeShelf extends Component {
   render() {
     return (
-      <div>
-        
+      <div className="book-shelf-changer">
+        <select>
+          <option value="move" disabled>Move to...</option>
+          <option value="currentlyReading">Currently Reading</option>
+          <option value="wantToRead">Want to Read</option>
+          <option value="read">Read</option>
+          <option value="none">None</option>
+        </select>
       </div>
     )
   }
