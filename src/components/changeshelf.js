@@ -4,9 +4,12 @@ import React, { Component } from 'react'
 
 export default class ChangeShelf extends Component {
   render() {
+
+    const {myShelf, changeShelf, book} = this.props
+    
     return (
       <div className="book-shelf-changer">
-        <select>
+        <select value={myShelf} onChange={ (event) => changeShelf(book, event.target.value)}>
           <option value="move" disabled>Move to...</option>
           <option value="currentlyReading">Currently Reading</option>
           <option value="wantToRead">Want to Read</option>
