@@ -38,9 +38,6 @@ export default class SearchPage extends Component {
   }
   
 }
-
-
-
   render() {
 
     const {allBooks, changeShelf, haveShelf} = this.props

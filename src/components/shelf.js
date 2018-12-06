@@ -12,21 +12,20 @@ export default class Shelf extends Component {
         <h2 className="bookshelf-title">{shelfName}</h2>
           <div className="bookshelf-books">
               <ol className="books-grid">
-              {
-              //Filter the books with the shelf value set in the myBookPage component
-              //Each element in the array will add a new Book element
-              allBooks.filter( book => book.shelf === shelfValue)
-              //Map calls a provided callback function once for each element in an array, in order, and constructs a new array from the results
-              .map(book => (
-                <Book book={book}
-                key={book.id}
-                author={book.authors}
-                changeShelf={changeShelf}
-                />
-              ))}                              
+              
+              {/* Filter the books with the book.shelf value set in the myBookPage component and display them at the correct shelf on the page.
+                  Each element in the array will add a new Book component with the map() */}
+              
+              {allBooks.filter( book => book.shelf === shelfValue)             
+                .map(book => (
+                  <Book book={book}
+                  key={book.id}
+                  author={book.authors}
+                  changeShelf={changeShelf}
+                  />
+                ))}                              
               </ol>
           </div>
       </div>
-    )
-  }
+    )}
 }

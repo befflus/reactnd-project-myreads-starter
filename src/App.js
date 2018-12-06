@@ -19,19 +19,21 @@ class BooksApp extends React.Component {
     console.log('componentDidMount done');
     }
 
+//Function for getting all books that currently is in the bookshelves, and then store them in the allBooks array    
   setBookArray () {
     BooksAPI.getAll().then(books => {
       this.setState({allBooks: books});
     });
   }
 
-  //Function for changing shelf for a book
+  //Function for changing the shelf for a book
  changeShelf = (book, shelf) => {
    BooksAPI.update(book, shelf).then(() => {
      this.setBookArray();
      })
   }
  
+  //Function for checking if a searched book is already on a shelf. The Id of the book is used for comparing books. If false 'none' is retruned
   haveShelf = (book) => {
 
     this.state.allBooks.filter(allbooks => {
