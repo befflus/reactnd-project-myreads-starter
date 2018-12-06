@@ -8,8 +8,6 @@ but without any of the React code that is needed to complete the project. Starte
 
 To get started right away:
 
-Be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
-
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
 
